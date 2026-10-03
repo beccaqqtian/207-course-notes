@@ -22,6 +22,13 @@ public class DigitSum {
      */
     public static int digitSum(int n) {
         // TODO: complete
-        return 0;
+
+        int sum = 0;
+        while (n >= 10) {
+            sum += n % 10; //Adding the rightmost (ones digit)
+            n = n / 10;
+        }
+
+        return sum;
     }
 }
